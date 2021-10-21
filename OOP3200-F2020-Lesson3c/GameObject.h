@@ -14,6 +14,9 @@ public:
 	GameObject();
 	GameObject(int id, float x, float y);
 	GameObject(int id, const Vector2D<float>& position);
+	GameObject (std::string name, int id, float x, float y);
+	GameObject(std::string name, int id, const Vector2D<float>& position);
+
 
 	// Rule of Three
 	~GameObject(); // Destructor
@@ -23,17 +26,20 @@ public:
 	// Accessors
 	Vector2D<float> GetPosition() const;
 	int GetID() const;
+	std::string GetName();
 	
 	// Mutators
 	void SetPosition(float x, float y);
 	void SetPosition(const Vector2D<float>& new_position);
 	void SetID(int id);
+	void SetName(std::string name);
 
 	// Utility Functions
 	std::string ToString() const;
 	
 private:
 	int m_id{};
+	std::string m_name;
 	Vector2D<float> m_position;
 };
 

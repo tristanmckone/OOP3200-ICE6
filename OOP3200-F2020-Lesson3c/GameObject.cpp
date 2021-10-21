@@ -3,13 +3,14 @@
 // 2021-10-21
 #include "GameObject.h"
 
-GameObject::GameObject(): m_id(0), m_position(Vector2D<float>())
+GameObject::GameObject(): m_id(0), m_name("not set"), m_position(Vector2D<float>())
 {
 }
 
 GameObject::GameObject(const int id, const float x, const float y)
 {
 	SetID(id);
+	SetName("not set");
 	SetPosition(x, y);
 }
 
@@ -17,6 +18,22 @@ GameObject::GameObject(const int id, const Vector2D<float>& position)
 {
 	SetID(id);
 	SetPosition(position);
+}
+
+GameObject::GameObject(std::string name, int id, float x, float y)
+{
+}
+
+GameObject::GameObject(std::string name, int id, const Vector2D<float>& position)
+{
+}
+
+std::string GameObject::GetName()
+{
+}
+
+void GameObject::SetName(std::string name)
+{
 }
 
 GameObject::~GameObject()
