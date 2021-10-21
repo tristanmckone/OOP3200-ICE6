@@ -59,7 +59,21 @@ int main()
 	std::map<std::string, GameObject> gameObjects;
 
 
+	GameObject ship("Ship", 0, 3.0f,4.0f);
 
+
+	GameObject enemy("Ship", 0, 10.0f, 20.0f);
+
+	gameObjects["ship"] = ship;
+
+	gameObjects["enemy"] = enemy;
+
+	// for every game object in game objects loop through
+	for (auto game_object : gameObjects)
+	{
+		std::cout << "Key	:" << game_object.first << std::endl;
+		std::cout << "Value	:" << game_object.second.ToString() << std::endl;
+	}
 	/*std::vector<GameObject*> gameObjects;
 
 	int num_of_GO;

@@ -88,6 +88,7 @@ std::string GameObject::ToString() const
 {
 	std::string output_string;
 	output_string += "ID       : " + std::to_string(GetID()) + "\n";
+	output_string += "Name       : " + GetName() + "\n";
 	output_string += "Position : " + GetPosition().ToString() + "\n";
 	return output_string;
 }
